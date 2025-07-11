@@ -1,0 +1,269 @@
+<!-- Top Banner -->
+<div class="top-banner bg-black text-white font-14">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center position-relative">
+        <span class="font-14 fw-semibold text-white">Every Move, A Workout</span>
+        <div class="language-selector-wrapper d-none d-lg-block">
+          <a
+            href="#"
+            class="language-selector text-white text-decoration-none font-12"
+          >
+            <img width="" height="" src="{{ 'icon_uk_flag.svg' | asset_url }}" alt=""> EN
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header class="main-header d-lg-block d-none">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-3">
+        <a href="/" class="font-24 fw-bold text-black text-decoration-none">
+          <img width="" height="" src="{{ 'skinnify_logo.svg' | asset_url }}" alt="">
+        </a>
+      </div>
+      <div class="col-md-6">
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input bg-white font-14"
+            placeholder="Search product"
+          >
+          <button class="search-btn bg-black border-0 text-white">
+            <img width="" height="" src="{{ 'icon_search.svg' | asset_url }}" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="col-md-3 text-end">
+        <a
+          href="#"
+          class="cart-icon text-black font-20 text-decoration-none"
+        >
+          <img width="" height="" src="{{ 'icon_shopping_bag.svg' | asset_url }}" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="d-md-block d-lg-none">
+  <!-- Logo + icon row -->
+  <div class="bg-white border-bottom py-2">
+    <div
+      class="container d-flex justify-content-between align-items-center"
+    >
+      <!-- Brand -->
+      <a href="#" class="fw-bold text-decoration-none">
+        <img
+          width=""
+          height="26"
+          src="{{ 'skinnify_logo.svg' | asset_url }}"
+          alt="SKINNIFY"
+        >
+      </a>
+
+      <!-- Icon cluster -->
+      <div class="d-flex align-items-center gap-3">
+        <!-- Search toggle -->
+        <button
+          class="btn p-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#tabletSearch"
+          aria-expanded="false"
+          aria-controls="tabletSearch"
+        >
+          <img width="" height="" src="{{ 'icon_white_search_icon.svg' | asset_url }}" alt="Search">
+        </button>
+
+        <!-- Inbox / mail -->
+        <a href="#" class="btn p-0">
+          <img width="" height="" src="{{ 'icon_shopping_bag.svg' | asset_url }}" alt="Inbox">
+        </a>
+
+        <!-- Hamburger menu -->
+        <button
+          class="btn p-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#tabletMenu"
+          aria-controls="tabletMenu"
+        >
+          <img width="" height="" src="{{ 'icon_menu.svg' | asset_url }}" alt="Menu">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collapsible search bar -->
+  <div class="collapse bg-white border-top" id="tabletSearch">
+    <div class="container py-2">
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search product"
+          aria-label="Search"
+        >
+        <button class="btn btn-dark" type="submit">
+          <img width="" height="18" src="{{ 'icon_search.svg' | asset_url }}" alt="">
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- Navigation -->
+<nav class="main-nav bg-color-fc d-none d-lg-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg bg-color-fc">
+          <div class="container-fluid px-0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-color-2a"
+                    aria-current="page"
+                    href="#"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-color-2a" href="#"> All Products </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-color-2a" href="#">Leggings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-color-2a" href="#">Pants</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-color-2a" href="#">Tops</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-color-2a" href="#">Shoes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-color-2a" href="#">Gift Card</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-color-2a" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-color-2a" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-color-2a" href="#">We’re Hiring</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ░░ Off-canvas slide-in Menu (tablet only) ░░ -->
+<div
+  class="offcanvas offcanvas-end d-md-block d-lg-none"
+  tabindex="-1"
+  id="tabletMenu"
+>
+  <div class="offcanvas-header">
+    <a href="/" class="font-24 fw-bold text-black text-decoration-none">
+      <img width="" height="" src="{{ 'skinnify_logo.svg' | asset_url }}" alt="">
+    </a>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+
+  <div class="offcanvas-body px-0">
+    <ul class="navbar-nav ps-3">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">All Products</a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">Leggings</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Pants</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Tops</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Shoes</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">We’re Hiring</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "top_text",
+      "label": "Top Bar Text",
+      "default": "Every Move, A Workout"
+    },
+    {
+      "type": "text",
+      "id": "language_text",
+      "label": "Language Selector Text",
+      "default": "EN"
+    },
+    {
+      "type": "image_picker",
+      "id": "flag_icon",
+      "label": "Language Flag Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "cart_icon",
+      "label": "Cart Icon"
+    },
+    {
+      "type": "link_list",
+      "id": "main_menu",
+      "label": "Main Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header Section"
+    }
+  ]
+}
+{% endschema %}

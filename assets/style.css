@@ -1,0 +1,858 @@
+@charset "UTF-8";
+/**
+ * @Main scss for SKINNIFY
+ * @project     - SKINNIFY
+ * @author      -
+ * @created_by  -
+ * @created_at  -
+ * @modified_by -
+ */
+/* fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/* fonts import -END */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* reset, root */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a:focus,
+button:focus,
+.btn:focus,
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/*color variables*/
+:root {
+  --color-00: #000;
+  --color-33: #333;
+  --color-0b: #09090b;
+  --color-ed: #e8eaed;
+  --color-ff: #e7efff;
+  --color-fc: #f8fafc;
+  --color-2a: #27272a;
+  --color-1b: #18181b;
+  --color-a2: #61bca2;
+  --color-15: #facc15;
+  --color-e7: #e4e4e7;
+  --color-f0: #e2e8f0;
+  --color-fff: #fff;
+  --color-46: #3f3f46;
+  --color-fb: #f9fafb;
+  --color-80: #6b7280;
+  --color-51: #374151;
+}
+
+/* container resize /-start */
+.container {
+  width: 100% !important;
+  max-width: 1736px !important;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1110px;
+  }
+}
+
+/* container resize /-end */
+/* helper , base classes */
+/* text-color /-start */
+.text-color-00 {
+  color: var(--color-00);
+}
+
+.text-color-0b {
+  color: var(--color-0b);
+}
+
+.text-color-46 {
+  color: var(--color-46);
+}
+
+.text-color-ed {
+  color: var(--color-ed);
+}
+
+.text-color-ff {
+  color: var(--color-ff);
+}
+
+.text-color-fc {
+  color: var(--color-fc);
+}
+
+.text-color-2a {
+  color: var(--color-2a);
+}
+
+.text-color-1b {
+  color: var(--color-1b);
+}
+
+.text-color-a2 {
+  color: var(--color-a2);
+}
+
+.text-color-15 {
+  color: var(--color-15);
+}
+
+.text-color-e7 {
+  color: var(--color-e7);
+}
+
+.text-color-80 {
+  color: var(--color-80);
+}
+
+.text-color-51 {
+  color: var(--color-51);
+}
+
+/* text-color /-end */
+/* bg-color /-start */
+.bg-color-00 {
+  background-color: var(--color-00);
+}
+
+.bg-color-ff {
+  background-color: var(--color-fff);
+}
+
+.bg-color-ed {
+  background-color: var(--color-ed);
+}
+
+.bg-color-fb {
+  background-color: var(--color-fb);
+}
+
+.bg-color-ff {
+  background-color: var(--color-ff);
+}
+
+.bg-color-fc {
+  background-color: var(--color-fc);
+}
+
+.bg-color-2a {
+  background-color: var(--color-2a);
+}
+
+.bg-color-1b {
+  background-color: var(--color-1b);
+}
+
+.bg-color-a2 {
+  background-color: var(--color-a2);
+}
+
+.bg-color-15 {
+  background-color: var(--color-15);
+}
+
+.bg-color-e7 {
+  background-color: var(--color-e7);
+}
+
+.bg-color-80 {
+  background-color: var(--color-80);
+}
+
+/* bg-color /-end */
+/* font-size /-start */
+.font-12 {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+@media (max-width: 425px) {
+  .font-20 {
+    font-size: 16px;
+  }
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.font-30 {
+  font-size: 30px;
+}
+
+.font-32 {
+  font-size: 32px;
+}
+
+.font-36 {
+  font-size: 36px;
+}
+
+.font-40 {
+  font-size: 40px;
+}
+@media (max-width: 425px) {
+  .font-40 {
+    font-size: 24px;
+  }
+}
+
+.font-48 {
+  font-size: 48px;
+}
+
+@media (max-width: 425px) {
+  .font-48 {
+    font-size: 24px !important;
+  }
+}
+.font-56 {
+  font-size: 56px;
+}
+
+/* font-size /-end */
+/* font-weight /-start */
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-extrabold {
+  font-weight: 800;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+/* font-weight /-end */
+/* text transform /-start */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-normal {
+  text-transform: none;
+}
+
+/* text transform /-end */
+/* padding */
+.p-8 {
+  padding: 8px;
+}
+
+.pt-80 {
+  padding-top: 80px;
+}
+@media (max-width: 425px) {
+  .pt-80 {
+    padding-top: 40px;
+  }
+}
+
+.pb-24 {
+  padding-bottom: 24px;
+}
+@media (max-width: 425px) {
+  .pb-24 {
+    padding-bottom: 12px;
+  }
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+@media (max-width: 425px) {
+  .pb-40 {
+    padding-bottom: 20px;
+  }
+}
+
+.pb-48 {
+  padding-bottom: 48px;
+}
+@media (max-width: 425px) {
+  .pb-48 {
+    padding-bottom: 24px;
+  }
+}
+
+.px-12 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (max-width: 425px) {
+  .px-12 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (max-width: 425px) {
+  .px-16 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.px-24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media (max-width: 425px) {
+  .px-24 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.px-32 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 425px) {
+  .px-32 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.px-34 {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+@media (max-width: 425px) {
+  .px-34 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.px-40 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media (max-width: 425px) {
+  .px-40 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.px-96 {
+  padding-left: 96px;
+  padding-right: 96px;
+}
+@media (max-width: 768px) {
+  .px-96 {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.py-24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.py-32 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+@media (max-width: 425px) {
+  .py-32 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.py-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (max-width: 425px) {
+  .py-40 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.py-44 {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+@media (max-width: 425px) {
+  .py-44 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.py-48 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+@media (max-width: 425px) {
+  .py-48 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.py-96 {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media (max-width: 768px) {
+  .py-96 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+@media (max-width: 425px) {
+  .py-96 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/* padding /-end */
+/* margin /-start */
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mr-24 {
+  margin-right: 24px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-44 {
+  margin-bottom: 44px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mb-96 {
+  margin-bottom: 96px;
+}
+@media (max-width: 425px) {
+  .mb-96 {
+    margin-bottom: 48px;
+  }
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mt-80 {
+  margin-top: 80px !important;
+}
+@media (max-width: 425px) {
+  .mt-80 {
+    margin-top: 24px !important;
+  }
+}
+
+.mt-56 {
+  margin-top: 56px;
+}
+
+.gap-48 {
+  gap: 48px;
+}
+
+.space-y-44 {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+/* margin /-end */
+/* box-shadow /-start */
+.box-shadow {
+  box-shadow: 0px 15px 40px rgba(22, 8, 49, 0.1);
+}
+
+.box-shadow2 {
+  box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* box-shadow /-end */
+/* border */
+.border-color-e7 {
+  border-color: var(--color-e7);
+}
+
+.border-color-f0 {
+  border-color: var(--color-f0);
+}
+
+.border-py {
+  border-top: 1px solid var(--color-e7);
+  border-bottom: 1px solid var(--color-e7);
+}
+
+.border-left-none {
+  border-left: none !important;
+}
+
+.border-right-none {
+  border-right: none !important;
+}
+
+/* border /-end */
+/* border-radius /-start */
+.radius-10 {
+  border-radius: 10px;
+}
+
+.radius-16 {
+  border-radius: 16px;
+}
+
+.w-176px {
+  max-width: 126px;
+  width: 100%;
+}
+
+.w-410px {
+  max-width: 410px;
+  width: 100%;
+}
+
+.h-507px {
+  height: 507px;
+}
+
+/* border-radius /-end */
+/* reset, root /-end */
+/* main style start from here */
+/* Top Banner */
+.top-banner {
+  padding: 8px 0;
+  position: relative;
+}
+.top-banner .language-selector-wrapper {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.top-banner .language-selector:hover {
+  color: #ccc;
+}
+
+/* header styles */
+.main-header {
+  padding: 20px 0;
+}
+.main-header .search-container {
+  position: relative;
+  max-width: 544px;
+  width: 100%;
+  margin: 0 auto;
+}
+.main-header .search-container .search-input {
+  border: 1px solid var(--color-ed);
+  border-radius: 0;
+  padding: 14px 12px;
+  width: 100%;
+}
+.main-header .search-container .search-input:focus {
+  outline: none;
+  border-color: var(--color-ed);
+  box-shadow: none;
+}
+.main-header .search-container .search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.main-header .search-container .search-btn:hover {
+  background: var(--color-33);
+}
+
+/* Navigation */
+.main-nav {
+  padding: 20px 0;
+}
+.main-nav .nav-item .nav-link {
+  margin-right: 48px;
+  padding: 0px !important;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .offcanvas-end {
+    width: 260px;
+  }
+  /* narrower slide-in */
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+  /* dark hamburger */
+  .tagline small {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+}
+/* product single page */
+.product-sample {
+  padding-top: 80px;
+}
+
+/* radio btn  */
+.form-check-input.custom-radio {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-1b);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background-color: white;
+}
+
+.form-check-input.custom-radio:checked {
+  background-color: var(--color-1b);
+}
+
+/* radio btn  end*/
+/* size btn start*/
+.size-btn:hover {
+  background-color: black !important;
+  color: white;
+}
+
+/* sizze btn end  */
+/* product single page /-end */
+/* ----------  Reviews slider navigation  ---------- */
+#reviews .swiper-button-prev::after,
+#reviews .swiper-button-next::after {
+  display: none;
+}
+
+#reviews .swiper-button-prev,
+#reviews .swiper-button-next {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Hide Bootstrap's default arrow */
+.accordion-button::after {
+  display: none !important;
+}
+
+/* Custom accordion button styling */
+.custom-accordion-btn {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0.75rem 0 !important;
+}
+
+/* Custom toggle + and - */
+.accordion-toggle {
+  font-size: 1.25rem;
+  margin-left: auto;
+  transition: transform 0.2s ease;
+  font-size: 30px;
+}
+
+.accordion-button:not(.collapsed) .accordion-toggle {
+  content: "-";
+}
+
+/* Title styling */
+.accordion-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Remove default borders */
+.accordion-item {
+  border: none !important;
+}
+
+/* ---------- scope everything under this class ---------- */
+.custom-faq-section .faq-toggle-wrapper {
+  background: #fff;
+  color: #000;
+}
+
+/* question bar when open */
+.custom-faq-section .accordion-button:not(.collapsed) {
+  background: #000;
+  color: #fff;
+}
+
+.custom-faq-section .accordion-button:not(.collapsed) span {
+  color: #fff;
+}
+
+/* remove Bootstrap’s chevron */
+.custom-faq-section .accordion-button::after {
+  display: none;
+}
+
+.custom-faq-section .icon-holder {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
+.custom-faq-section .icon-plus,
+.custom-faq-section .icon-minus {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-faq-section .icon-minus {
+  opacity: 0;
+}
+
+.custom-faq-section .accordion-button:not(.collapsed) .icon-plus {
+  opacity: 0;
+}
+
+.custom-faq-section .accordion-button:not(.collapsed) .icon-minus {
+  opacity: 1;
+}
+
+/* ---------- answer area when open (uses .show from Bootstrap) */
+.custom-faq-section .accordion-collapse.show .accordion-body {
+  background: #000;
+  color: #fff;
+}
+
+.newSwiper2 .swiper-slide h2 {
+  min-height: 48px;
+}
+
+/* adjust as needed */
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: auto;
+}/*# sourceMappingURL=style.css.map */
