@@ -140,42 +140,29 @@
               id="navbarSupportedContent"
             >
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-color-2a"
-                    aria-current="page"
-                    href="#"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-color-2a" href="#"> All Products </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-color-2a" href="#">Leggings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-color-2a" href="#">Pants</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-color-2a" href="#">Tops</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-color-2a" href="#">Shoes</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-color-2a" href="#">Gift Card</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-color-2a" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-color-2a" href="#">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-color-2a" href="#">We’re Hiring</a>
-                </li>
+                {% if section.settings.main_menu != blank %}
+                  {% for link in section.settings.main_menu.links %}
+                    <li class="nav-item {% if link.links != blank %}dropdown{% endif %}">
+                      <a
+                        class="nav-link text-color-2a {% if link.links != blank %}dropdown-toggle{% endif %}"
+                        href="{{ link.url }}"
+                        {% if link.active %}aria-current="page"{% endif %}
+                        {% if link.links != blank %}data-bs-toggle="dropdown" role="button" aria-expanded="false"{% endif %}
+                      >
+                        {{ link.title }}
+                      </a>
+                      {% if link.links != blank %}
+                        <ul class="dropdown-menu">
+                          {% for child in link.links %}
+                            <li>
+                              <a class="dropdown-item" href="{{ child.url }}" {% if child.active %}aria-current="page"{% endif %}>{{ child.title }}</a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                {% endif %}
               </ul>
             </div>
           </div>
@@ -205,20 +192,22 @@
 
   <div class="offcanvas-body px-0">
     <ul class="navbar-nav ps-3">
-      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">All Products</a>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="#">Leggings</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Pants</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Tops</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Shoes</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">We’re Hiring</a>
-      </li>
+      {% if section.settings.main_menu != blank %}
+        {% for link in section.settings.main_menu.links %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>{{ link.title }}</a>
+            {% if link.links != blank %}
+              <ul class="nav flex-column ms-3">
+                {% for child in link.links %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ child.url }}" {% if child.active %}aria-current="page"{% endif %}>{{ child.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      {% endif %}
     </ul>
   </div>
 </div>

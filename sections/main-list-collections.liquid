@@ -1,0 +1,18 @@
+{% comment %}Auto-generated placeholder for list-collections{% endcomment %}
+<section class="page-width section-main-list-collections">
+  <h1>{{ 'collections.general.title' | t }}</h1>
+  <ul class="grid">
+    {% for collection in collections %}
+      <li>
+        <a href="{{ collection.url }}">{{ collection.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}{
+  "name": "Main List Collections",
+  "tag": "section",
+  "class": "section-main-list-collections",
+  "settings": []
+}{% endschema %}

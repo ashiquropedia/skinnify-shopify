@@ -1,0 +1,14 @@
+{% comment %}Auto-generated placeholder for cart{% endcomment %}
+<section class="page-width section-main-cart">
+  <h1>{{ 'cart.general.title' | t }}</h1>
+  <form action="/cart" method="post" novalidate>
+    <cart-items></cart-items>
+  </form>
+</section>
+
+{% schema %}{
+  "name": "Main Cart",
+  "tag": "section",
+  "class": "section-main-cart",
+  "settings": []
+}{% endschema %}

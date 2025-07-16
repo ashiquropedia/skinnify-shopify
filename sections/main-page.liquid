@@ -1,0 +1,84 @@
+{% comment %}
+  Main Page Section – includes an optional banner followed by the page body.
+{% endcomment %}
+
+{%- if section.settings.show_banner -%}
+  <section class="banner-section">
+    <img
+      src="{{ section.settings.banner_image | image_url: width: 2048 }}"
+      width="{{ section.settings.banner_image.width }}"
+      height="{{ section.settings.banner_image.height }}"
+      alt="{{ section.settings.banner_alt | escape }}"
+      class="img-fluid w-100 h-100 banner-img"
+      loading="lazy"
+    >
+    <div class="banner-content container">
+      <h2 class="text-white font-60 fw-sembold mb-16">{{ section.settings.banner_heading }}</h2>
+      <p class="font-16 text-white mb-24">{{ section.settings.banner_text }}</p>
+      {%- if section.settings.button_label != blank -%}
+        <a href="{{ section.settings.button_link }}" class="home-our_products_btn">{{ section.settings.button_label }}</a>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
+
+<section class="page-width section-main-page conatainer">
+  <h1>{{ page.title }}</h1>
+  {{ page.content }}
+</section>
+
+{% schema %}
+{
+  "name": "Main Page",
+  "tag": "section",
+  "class": "section-main-page",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_banner",
+      "label": "Show banner",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner image"
+    },
+    {
+      "type": "text",
+      "id": "banner_alt",
+      "label": "Banner image alt text",
+      "default": "Banner"
+    },
+    {
+      "type": "text",
+      "id": "banner_heading",
+      "label": "Banner heading",
+      "default": "Every Move, A Workout"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_text",
+      "label": "Banner text",
+      "default": "Reinventing fitness with resistance clothing that turns every movement into effective exercise."
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "View Our Products"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main page with banner"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,20 @@
+{% comment %}Auto-generated placeholder for collection{% endcomment %}
+<section class="page-width section-main-collection">
+  <h1>{{ collection.title }}</h1>
+  {% paginate collection.products by 24 %}
+    <ul class="grid">
+      {% for product in collection.products %}
+        <li>
+          {% render 'product-card', product: product %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endpaginate %}
+</section>
+
+{% schema %}{
+  "name": "Main Collection",
+  "tag": "section",
+  "class": "section-main-collection",
+  "settings": []
+}{% endschema %}
