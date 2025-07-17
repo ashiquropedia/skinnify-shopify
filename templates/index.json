@@ -97,12 +97,64 @@
       "settings": {
         "heading": "Popular Right Now"
       }
+    },
+    "what_work_best_dGHWTU": {
+      "type": "what-work-best",
+      "blocks": {
+        "product_4U6W6W": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/1.jpg",
+            "product_title": "Our Clothing",
+            "product_price": "$40 - $80",
+            "product_note": "(One-time)"
+          }
+        },
+        "product_9VG6Nd": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/1.jpg",
+            "product_title": "GYM",
+            "product_price": "$40 - $80",
+            "product_note": "(One-time)"
+          }
+        },
+        "product_VkWfYi": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/1.jpg",
+            "product_title": "Fitness",
+            "product_price": "$40 - $80",
+            "product_note": "(one-time)"
+          }
+        },
+        "product_FnPYrR": {
+          "type": "product",
+          "settings": {
+            "product_image": "shopify://shop_images/1.jpg",
+            "product_title": "Another Option",
+            "product_price": "$40 - $80",
+            "product_note": "(one-time)"
+          }
+        }
+      },
+      "block_order": [
+        "product_4U6W6W",
+        "product_9VG6Nd",
+        "product_VkWfYi",
+        "product_FnPYrR"
+      ],
+      "name": "Comparison Table",
+      "settings": {
+        "section_heading": "Get Fit, Lose Weight & Build Muscle: What Works Best?"
+      }
     }
   },
   "order": [
     "hero_section",
     "our_product",
     "fitness_innovation",
-    "popular_right_now_HtiQeE"
+    "popular_right_now_HtiQeE",
+    "what_work_best_dGHWTU"
   ]
 }
