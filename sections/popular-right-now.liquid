@@ -124,8 +124,33 @@
 {% schema %}
   {
     "name": "Popular Section",
-    "settings": [],
-    "blocks": [],
+    "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Our Products"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Section Subtext",
+      "default": "We create new, innovative clothing with built-in resistance."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_block",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
+        }
+      ]
+    }
+  ],
     "presets": [{
       "name": "Popular Section"
     }]
