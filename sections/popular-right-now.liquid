@@ -1,3 +1,125 @@
+<!-- Our Products -->
+<section class="py-48">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4 mb-lg-5 review-nav">
+      <div>
+        <h2 class="fw-semibold mb-0 font-36">
+          {{ section.settings.heading }}
+        </h2>
+        <p class="font-16 mt-12">
+          {{ section.settings.subtext }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Desktop Grid View -->
+    <div class="row d-none d-lg-flex">
+      {% for block in section.blocks %}
+        {% assign product = block.settings.product %}
+        {% if product != blank %}
+          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 mb-4" {{ block.shopify_attributes }}>
+            <!-- Product Image -->
+            <img
+              src="{{ product.featured_image | image_url: width: 400 }}"
+              class="img-fluid mb-3"
+              alt="{{ product.title }}"
+              width="400"
+              height="400"
+              loading="lazy"
+            >
+
+            <!-- Product Rating -->
+            <div class="product-rating d-flex align-items-center gap-2 mb-2">
+              <div class="star d-flex align-items-center gap-1">
+                <i class="fa-solid fa-star text-color-15"></i>
+                <i class="fa-solid fa-star text-color-15"></i>
+                <i class="fa-solid fa-star text-color-15"></i>
+                <i class="fa-solid fa-star text-color-15"></i>
+                <i class="fa-solid fa-star text-color-15"></i>
+              </div>
+              <p class="fw-bold text-color-46">5.0</p>
+            </div>
+
+            <!-- Product Title -->
+            <a
+              href="{{ product.url }}"
+              target="_blank"
+              class="h5 mb-2 fw-semibold text-decoration-none text-color-46 d-block"
+            >
+              {{ product.title }}
+            </a>
+
+            <!-- Product Description -->
+            <p class="font-16 text-color-46 mb-2">
+              {{ product.description | strip_html | truncate: 100 }}
+            </p>
+
+            <!-- Product Price -->
+            <span class="font-16 text-color-0b fw-semibold">
+              {{ product.price | money }}
+            </span>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Mobile Swiper View -->
+    <div class="d-block d-lg-none">
+      <div class="swiper homeOurproductsSwiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = block.settings.product %}
+            {% if product != blank %}
+              <div class="swiper-slide" {{ block.shopify_attributes }}>
+                <!-- Product Image -->
+                <img
+                  src="{{ product.featured_image | image_url: width: 400 }}"
+                  class="img-fluid mb-3"
+                  alt="{{ product.title }}"
+                  width="400"
+                  height="400"
+                  loading="lazy"
+                >
+
+                <!-- Product Rating -->
+                <div class="product-rating d-flex align-items-center gap-2 mb-2">
+                  <div class="star d-flex align-items-center gap-1">
+                    <i class="fa-solid fa-star text-color-15"></i>
+                    <i class="fa-solid fa-star text-color-15"></i>
+                    <i class="fa-solid fa-star text-color-15"></i>
+                    <i class="fa-solid fa-star text-color-15"></i>
+                    <i class="fa-solid fa-star text-color-15"></i>
+                  </div>
+                  <p class="fw-bold text-color-46">5.0</p>
+                </div>
+
+                <!-- Product Title -->
+                <a
+                  href="{{ product.url }}"
+                  target="_blank"
+                  class="h5 mb-2 fw-semibold text-decoration-none text-color-46 d-block"
+                >
+                  {{ product.title }}
+                </a>
+
+                <!-- Product Description -->
+                <p class="font-16 text-color-46 mb-2">
+                  {{ product.description | strip_html | truncate: 100 }}
+                </p>
+
+                <!-- Product Price -->
+                <span class="font-16 text-color-0b fw-semibold">
+                  {{ product.price | money }}
+                </span>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% schema %}
   {
     "name": "Section name",
