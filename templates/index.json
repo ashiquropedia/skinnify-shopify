@@ -61,8 +61,21 @@
     },
     "popular_right_now_HtiQeE": {
       "type": "popular-right-now",
+      "blocks": {
+        "product_block_9ypNPC": {
+          "type": "product_block",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_block_9ypNPC"
+      ],
       "name": "Popular Section",
-      "settings": {}
+      "settings": {
+        "heading": "Popular Right Now"
+      }
     }
   },
   "order": [
