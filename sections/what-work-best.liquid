@@ -26,26 +26,30 @@
         </thead>
 
         <tbody>
-          {% assign features = '[{"name": "Results", "checks": [true, true, true, false]}, {"name": "Zero time required", "checks": [true, false, false, true]}, {"name": "Zero willpower required", "checks": [true, false, false, true]}, {"name": "Location independence", "checks": [true, false, true, true]}, {"name": "No injury risk", "checks": [true, false, true, true]}, {"name": "Privacy", "checks": [true, false, true, true]}]' | parse_json %}
+          {% assign features =
+            "Results:true,true,true,false|Zero time required:true,false,false,true|Zero willpower required:true,false,false,true|Location independence:true,false,true,true|No injury risk:true,false,true,true|Privacy:true,false,true,true" | split: '|' %}
 
           {% for feature in features %}
-          <tr>
-            <th scope="row" class="feature-header {% if forloop.first %}section-heading{% endif %}">{{ feature.name }}</th>
+            {% assign parts = feature | split: ':' %}
+            {% assign checks = parts[1] | split: ',' %}
 
-            {% for check in feature.checks %}
-              {% if forloop.parentloop.index0 == 0 and forloop.index0 == 0 %}
-                <td class="bg-black border-0">
-              {% else %}
-                <td>
-              {% endif %}
-                {% if check %}
-                  <img src="{{ 'check-circle-dark.svg' | asset_url }}" alt="✓" />
+            <tr>
+              <th scope="row" class="feature-header {% if forloop.first %}section-heading{% endif %}">{{ parts[0] }}</th>
+
+              {% for check in checks %}
+                {% if forloop.parentloop.index0 == 0 and forloop.index0 == 0 %}
+                  <td class="bg-black border-0">
                 {% else %}
-                  <img src="{{ 'x-circle.svg' | asset_url }}" alt="✗" />
+                  <td>
                 {% endif %}
-              </td>
-            {% endfor %}
-          </tr>
+                  {% if check == 'true' %}
+                    <img src="{{ 'check-circle-dark.svg' | asset_url }}" alt="✓" />
+                  {% else %}
+                    <img src="{{ 'x-circle.svg' | asset_url }}" alt="✗" />
+                  {% endif %}
+                </td>
+              {% endfor %}
+            </tr>
           {% endfor %}
 
         </tbody>
