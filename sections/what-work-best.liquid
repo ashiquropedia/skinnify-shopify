@@ -1,31 +1,4 @@
-{% schema %}
-{
-  "name": "Comparison Table",
-  "settings": [
-    {
-      "type": "text",
-      "id": "section_heading",
-      "label": "Section Heading",
-      "default": "Get Fit, Lose Weight & Build Muscle: What Works Best?"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "product",
-      "name": "Product Column",
-      "settings": [
-        {"type": "image_picker", "id": "product_image", "label": "Product Image"},
-        {"type": "text", "id": "product_title", "label": "Product Title"},
-        {"type": "text", "id": "product_price", "label": "Product Price"},
-        {"type": "text", "id": "product_note", "label": "Product Note"}
-      ]
-    }
-  ],
-  "presets": [
-    { "name": "Comparison Table", "category": "Custom Sections" }
-  ]
-}
-{% endschema %}
+
 
 <section id="whatWorksBest">
   <div class="container py-96 pt-0">
@@ -81,3 +54,32 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "Comparison Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Get Fit, Lose Weight & Build Muscle: What Works Best?"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product Column",
+      "settings": [
+        {"type": "image_picker", "id": "product_image", "label": "Product Image"},
+        {"type": "text", "id": "product_title", "label": "Product Title"},
+        {"type": "text", "id": "product_price", "label": "Product Price"},
+        {"type": "text", "id": "product_note", "label": "Product Note"}
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Comparison Table", "category": "Custom Sections" }
+  ]
+}
+{% endschema %}
