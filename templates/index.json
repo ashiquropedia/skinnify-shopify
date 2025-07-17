@@ -155,7 +155,7 @@
         "review_GaXPii": {
           "type": "review",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=iE600L-qdPA",
+            "video_url": "https://www.youtube.com/watch?v=Cn4G2lZ_g2I",
             "customer_name": "Aly",
             "rating": 5
           }
@@ -163,7 +163,23 @@
         "review_TBPiGB": {
           "type": "review",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=iE600L-qdPA",
+            "video_url": "https://www.youtube.com/watch?v=Cn4G2lZ_g2I",
+            "customer_name": "Aly",
+            "rating": 5
+          }
+        },
+        "review_cGbHMk": {
+          "type": "review",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Cn4G2lZ_g2I",
+            "customer_name": "Aly",
+            "rating": 5
+          }
+        },
+        "review_CUhwiB": {
+          "type": "review",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Cn4G2lZ_g2I",
             "customer_name": "Aly",
             "rating": 5
           }
@@ -171,7 +187,9 @@
       },
       "block_order": [
         "review_GaXPii",
-        "review_TBPiGB"
+        "review_TBPiGB",
+        "review_cGbHMk",
+        "review_CUhwiB"
       ],
       "name": "Customer Reviews Video",
       "settings": {
