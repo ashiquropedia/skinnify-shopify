@@ -1,5 +1,3 @@
-
-
 <section id="whatWorksBest">
   <div class="container py-96 pt-0">
     <div class="border-top border-color-f0 my-5"></div>
@@ -37,17 +35,23 @@
               <th scope="row" class="feature-header {% if forloop.first %}section-heading{% endif %}">{{ parts[0] }}</th>
 
               {% for check in checks %}
-                {% if forloop.parentloop.index0 == 0 and forloop.index0 == 0 %}
+                {% if forloop.index0 == 0 %}
                   <td class="bg-black border-0">
+                    {% if check == 'true' %}
+                      <img src="{{ 'check-circle-white.svg' | asset_url }}" alt="✓" />
+                    {% else %}
+                      <img src="{{ 'x-circle.svg' | asset_url }}" alt="✗" />
+                    {% endif %}
+                  </td>
                 {% else %}
                   <td>
+                    {% if check == 'true' %}
+                      <img src="{{ 'check-circle-dark.svg' | asset_url }}" alt="✓" />
+                    {% else %}
+                      <img src="{{ 'x-circle.svg' | asset_url }}" alt="✗" />
+                    {% endif %}
+                  </td>
                 {% endif %}
-                  {% if check == 'true' %}
-                    <img src="{{ 'check-circle-dark.svg' | asset_url }}" alt="✓" />
-                  {% else %}
-                    <img src="{{ 'x-circle.svg' | asset_url }}" alt="✗" />
-                  {% endif %}
-                </td>
               {% endfor %}
             </tr>
           {% endfor %}
