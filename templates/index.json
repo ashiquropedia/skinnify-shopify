@@ -233,6 +233,57 @@
       "settings": {
         "section_heading": "Why Choose Us?"
       }
+    },
+    "shop_by_category_CQtK7t": {
+      "type": "shop-by-category",
+      "blocks": {
+        "category_eBy8U6": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/VividPurple_3.jpg",
+            "title": "Leggings",
+            "link": "#",
+            "button_text": "Shop Now"
+          }
+        },
+        "category_UTNBnm": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/VividPurple_3.jpg",
+            "title": "Leggings",
+            "link": "#",
+            "button_text": "Shop Now"
+          }
+        },
+        "category_JLCwTY": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/VividPurple_3.jpg",
+            "title": "Leggings",
+            "link": "#",
+            "button_text": "Shop Now"
+          }
+        },
+        "category_PUjhcF": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/VividPurple_3.jpg",
+            "title": "Leggings",
+            "link": "#",
+            "button_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "category_eBy8U6",
+        "category_UTNBnm",
+        "category_JLCwTY",
+        "category_PUjhcF"
+      ],
+      "name": "Shop By Category",
+      "settings": {
+        "section_heading": "Shop By Category"
+      }
     }
   },
   "order": [
@@ -242,6 +293,7 @@
     "popular_right_now_HtiQeE",
     "what_work_best_dGHWTU",
     "customer_reviews_video_zTUVP7",
-    "why_choose_us_HQp9NB"
+    "why_choose_us_HQp9NB",
+    "shop_by_category_CQtK7t"
   ]
 }
