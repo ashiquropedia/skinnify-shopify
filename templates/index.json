@@ -195,6 +195,44 @@
       "settings": {
         "section_heading": "Real Customers, Real Reviews!"
       }
+    },
+    "why_choose_us_HQp9NB": {
+      "type": "why-choose-us",
+      "blocks": {
+        "reason_U4AgM3": {
+          "type": "reason",
+          "settings": {
+            "number": "01",
+            "title": "Revolutionary Fitness Innovation",
+            "description": "We’re transforming the way people stay active by building resistance directly into everyday clothing — no gym, no extra time required."
+          }
+        },
+        "reason_XHijhp": {
+          "type": "reason",
+          "settings": {
+            "number": "02",
+            "title": "Effortless Workouts, Anywhere",
+            "description": "Our clothing makes your muscles work harder with\nevery move, helping you burn calories, lose weight,\nand build strength just by living your life."
+          }
+        },
+        "reason_XBVyPp": {
+          "type": "reason",
+          "settings": {
+            "number": "03",
+            "title": "Consistent Progress, No Extra Effort",
+            "description": "You wear our clothing. You live your normal life.\nThe resistance works. That’s it. Progress becomes\nautomatic."
+          }
+        }
+      },
+      "block_order": [
+        "reason_U4AgM3",
+        "reason_XHijhp",
+        "reason_XBVyPp"
+      ],
+      "name": "Why Choose Us",
+      "settings": {
+        "section_heading": "Why Choose Us?"
+      }
     }
   },
   "order": [
@@ -203,6 +241,7 @@
     "fitness_innovation",
     "popular_right_now_HtiQeE",
     "what_work_best_dGHWTU",
-    "customer_reviews_video_zTUVP7"
+    "customer_reviews_video_zTUVP7",
+    "why_choose_us_HQp9NB"
   ]
 }
