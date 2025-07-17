@@ -148,6 +148,35 @@
       "settings": {
         "section_heading": "Get Fit, Lose Weight & Build Muscle: What Works Best?"
       }
+    },
+    "customer_reviews_video_zTUVP7": {
+      "type": "customer-reviews-video",
+      "blocks": {
+        "review_GaXPii": {
+          "type": "review",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=iE600L-qdPA",
+            "customer_name": "Aly",
+            "rating": 5
+          }
+        },
+        "review_TBPiGB": {
+          "type": "review",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=iE600L-qdPA",
+            "customer_name": "Aly",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "review_GaXPii",
+        "review_TBPiGB"
+      ],
+      "name": "Customer Reviews Video",
+      "settings": {
+        "section_heading": "Real Customers, Real Reviews!"
+      }
     }
   },
   "order": [
@@ -155,6 +184,7 @@
     "our_product",
     "fitness_innovation",
     "popular_right_now_HtiQeE",
-    "what_work_best_dGHWTU"
+    "what_work_best_dGHWTU",
+    "customer_reviews_video_zTUVP7"
   ]
 }
