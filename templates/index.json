@@ -284,6 +284,15 @@
       "settings": {
         "section_heading": "Shop By Category"
       }
+    },
+    "our_story_jrPWqd": {
+      "type": "our-story",
+      "name": "Our Story",
+      "settings": {
+        "heading": "Our Story",
+        "intro_highlight": "Founded in 2022,",
+        "intro_text": "we started with a simple idea: What if we could integrate resistance bands into clothing? After countless tests, our first product was born - the Resistance Band Leggings."
+      }
     }
   },
   "order": [
@@ -294,6 +303,7 @@
     "what_work_best_dGHWTU",
     "customer_reviews_video_zTUVP7",
     "why_choose_us_HQp9NB",
-    "shop_by_category_CQtK7t"
+    "shop_by_category_CQtK7t",
+    "our_story_jrPWqd"
   ]
 }
