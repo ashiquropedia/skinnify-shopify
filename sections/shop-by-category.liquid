@@ -1,6 +1,109 @@
+<section id="shopCategorySwiper">
+  <div class="container py-96 pt-0">
+    <div class="border-top border-color-f0 my-5"></div>
+    <div class="d-flex justify-content-between align-items-center mb-5 review-nav">
+      <h2 class="fw-semibold mb-0 font-36">{{ section.settings.section_heading }}</h2>
+      <div class="d-flex align-items-center gap-3">
+        <div class="swiper-button-prev category-prev">
+          <img src="{{ 'icon_guidance_up-left_arrow.svg' | asset_url }}" alt="Previous">
+        </div>
+        <div class="swiper-button-next category-next">
+          <img src="{{ 'icon_guidance_up-right_arrow.svg' | asset_url }}" alt="Next">
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper shopCategorySwiper mt-56">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="review-card">
+              <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.title }}" class="mb-4 img-fluid size-543 w-100" />
+              <div class="d-flex flex-column align-items-center gap-4">
+                <h3 class="font-24 fw-semibold mb-0">{{ block.settings.title }}</h3>
+                <a href="{{ block.settings.link }}" target="_blank" class="btn-custom-dark font-16 text-decoration-none">
+                  {{ block.settings.button_text }}
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.shopCategorySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.category-next',
+        prevEl: '.category-prev'
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        1200: {
+          slidesPerView: 4
+        }
+      }
+    });
+  });
+</script>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Shop By Category",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Shop By Category"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Category Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Title",
+          "default": "Leggings"
+        },
+        {
+          "type": "text",
+          "id": "link",
+          "label": "Button Link",
+          "default": "#"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Shop Now"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop By Category",
+      "category": "Custom Sections"
+    }
+  ]
+}
 {% endschema %}
