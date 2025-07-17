@@ -287,11 +287,80 @@
     },
     "our_story_jrPWqd": {
       "type": "our-story",
+      "blocks": {
+        "timeline_item_Rmd8az": {
+          "type": "timeline_item",
+          "settings": {
+            "title": "6+ months of research and development",
+            "description": "From sourcing stretchable resistance materials to finding the perfect balance of comfort and tension."
+          }
+        },
+        "timeline_item_48aMHj": {
+          "type": "timeline_item",
+          "settings": {
+            "title": "1st Product Launch — Resistance Band Leggings",
+            "description": "Designed to turn everyday movement into low-impact strength training."
+          }
+        },
+        "timeline_item_DKXXNn": {
+          "type": "timeline_item",
+          "settings": {
+            "title": "Our Main Goal",
+            "description": "From sourcing stretchable resistance materials to finding the perfect balance of comfort and tension."
+          }
+        },
+        "timeline_item_ptFAdE": {
+          "type": "timeline_item",
+          "settings": {
+            "title": "7 team members",
+            "description": "A passionate crew of designers, engineers, and fitness enthusiasts pushing the brand forward."
+          }
+        },
+        "timeline_item_Fgj79x": {
+          "type": "timeline_item",
+          "settings": {
+            "title": "6+ months of research and development",
+            "description": "From sourcing stretchable resistance materials to finding the perfect balance of comfort and tension."
+          }
+        },
+        "stat_wU3qHj": {
+          "type": "stat",
+          "settings": {
+            "stat_value": "10,000+",
+            "stat_label": "customers served"
+          }
+        },
+        "stat_nmT4FE": {
+          "type": "stat",
+          "settings": {
+            "stat_value": "10,000+",
+            "stat_label": "customers served"
+          }
+        },
+        "stat_y4fRX9": {
+          "type": "stat",
+          "settings": {
+            "stat_value": "10,000+",
+            "stat_label": "customers served"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_item_Rmd8az",
+        "timeline_item_48aMHj",
+        "timeline_item_DKXXNn",
+        "timeline_item_ptFAdE",
+        "timeline_item_Fgj79x",
+        "stat_wU3qHj",
+        "stat_nmT4FE",
+        "stat_y4fRX9"
+      ],
       "name": "Our Story",
       "settings": {
         "heading": "Our Story",
         "intro_highlight": "Founded in 2022,",
-        "intro_text": "we started with a simple idea: What if we could integrate resistance bands into clothing? After countless tests, our first product was born - the Resistance Band Leggings."
+        "intro_text": "we started with a simple idea: What if we could integrate resistance bands into clothing? After countless tests, our first product was born - the Resistance Band Leggings.",
+        "image": "shopify://shop_images/size_chart_slim_steps_2.jpg"
       }
     }
   },
