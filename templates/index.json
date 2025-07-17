@@ -65,12 +65,33 @@
         "product_block_9ypNPC": {
           "type": "product_block",
           "settings": {
-            "product": ""
+            "product": "resistance-band-leggings-colors"
+          }
+        },
+        "product_block_w7iRXp": {
+          "type": "product_block",
+          "settings": {
+            "product": "2-x-resistance-band-leggings-buy-1-get-1-free-midnight-blue"
+          }
+        },
+        "product_block_iMtEL7": {
+          "type": "product_block",
+          "settings": {
+            "product": "2-x-resistance-band-leggings-buy-1-get-1-free-stone-grey"
+          }
+        },
+        "product_block_q36hBc": {
+          "type": "product_block",
+          "settings": {
+            "product": "2-x-resistance-band-leggings-buy-1-get-1-free-sunflare-red"
           }
         }
       },
       "block_order": [
-        "product_block_9ypNPC"
+        "product_block_9ypNPC",
+        "product_block_w7iRXp",
+        "product_block_iMtEL7",
+        "product_block_q36hBc"
       ],
       "name": "Popular Section",
       "settings": {
