@@ -1,6 +1,62 @@
+
+
+<section id="reviews">
+  <div class="container">
+    <div class="border-top border-color-f0 my-5"></div>
+    <div class="d-flex justify-content-between align-items-baseline mb-4 review-nav mt-56">
+      <h2 class="fw-semibold mb-0 font-36 lh-1">{{ section.settings.section_heading }}</h2>
+    </div>
+
+    <div class="reviews-slider">
+      {% for block in section.blocks %}
+        <div class="review-card px-32 py-32 bg-color-fc">
+          <div class="video-wrapper position-relative mb-3" style="overflow: hidden;">
+            <iframe width="100%" height="315" src="{{ block.settings.video_url | escape }}" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="fw-semibold mb-0">{{ block.settings.customer_name }}</p>
+            <div class="product-rating d-flex align-items-center gap-2">
+              <div class="star d-flex align-items-center gap-1">
+                {% for i in (1..5) %}
+                  {% if i <= block.settings.rating %}
+                    <i class="fa-solid fa-star text-color-15"></i>
+                  {% else %}
+                    <i class="fa-regular fa-star text-color-15"></i>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Customer Reviews Video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Real Customers, Real Reviews!"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Customer Review",
+      "settings": [
+        {"type": "video_url", "id": "video_url", "label": "Review Video URL (YouTube/Vimeo)", "accept": ["youtube", "vimeo"]},
+        {"type": "text", "id": "customer_name", "label": "Customer Name"},
+        {"type": "range", "id": "rating", "label": "Rating", "min": 1, "max": 5, "step": 1, "default": 5}
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Customer Reviews Video", "category": "Custom Sections" }
+  ]
+}
 {% endschema %}
