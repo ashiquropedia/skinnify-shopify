@@ -1,6 +1,83 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Comparison Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Get Fit, Lose Weight & Build Muscle: What Works Best?"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product Column",
+      "settings": [
+        {"type": "image_picker", "id": "product_image", "label": "Product Image"},
+        {"type": "text", "id": "product_title", "label": "Product Title"},
+        {"type": "text", "id": "product_price", "label": "Product Price"},
+        {"type": "text", "id": "product_note", "label": "Product Note"}
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Comparison Table", "category": "Custom Sections" }
+  ]
+}
 {% endschema %}
+
+<section id="whatWorksBest">
+  <div class="container py-96 pt-0">
+    <div class="border-top border-color-f0 my-5"></div>
+    <h2 class="fw-semibold text-center mb-5 font-36">{{ section.settings.section_heading }}</h2>
+
+    <div class="pt-0 bg-white table-shadow responsive-table-layout">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th class="features-column"></th>
+            {% for block in section.blocks %}
+            <th class="product-column">
+              <div class="table-product-card {% if forloop.first %}black border-0{% endif %}">
+                <img src="{{ block.settings.product_image | img_url: 'medium' }}" alt="{{ block.settings.product_title }}" class="product-image" />
+                <div class="product-info">
+                  <div class="product-title">{{ block.settings.product_title }}</div>
+                  <div class="product-price">{{ block.settings.product_price }}</div>
+                  <div class="product-note">{{ block.settings.product_note }}</div>
+                </div>
+              </div>
+            </th>
+            {% endfor %}
+          </tr>
+        </thead>
+
+        <tbody>
+          {% assign features = '[{"name": "Results", "checks": [true, true, true, false]}, {"name": "Zero time required", "checks": [true, false, false, true]}, {"name": "Zero willpower required", "checks": [true, false, false, true]}, {"name": "Location independence", "checks": [true, false, true, true]}, {"name": "No injury risk", "checks": [true, false, true, true]}, {"name": "Privacy", "checks": [true, false, true, true]}]' | parse_json %}
+
+          {% for feature in features %}
+          <tr>
+            <th scope="row" class="feature-header {% if forloop.first %}section-heading{% endif %}">{{ feature.name }}</th>
+
+            {% for check in feature.checks %}
+              {% if forloop.parentloop.index0 == 0 and forloop.index0 == 0 %}
+                <td class="bg-black border-0">
+              {% else %}
+                <td>
+              {% endif %}
+                {% if check %}
+                  <img src="{{ 'check-circle-dark.svg' | asset_url }}" alt="✓" />
+                {% else %}
+                  <img src="{{ 'x-circle.svg' | asset_url }}" alt="✗" />
+                {% endif %}
+              </td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</section>
