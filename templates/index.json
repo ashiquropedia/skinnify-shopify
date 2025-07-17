@@ -34,15 +34,25 @@
           "settings": {
             "product": "resistance-band-leggings-3"
           }
+        },
+        "product_block_VifKqc": {
+          "type": "product_block",
+          "settings": {
+            "product": "resistance-band-leggings-3"
+          }
         }
       },
       "block_order": [
         "product_block_gMULV7",
         "product_block_YUFPTf",
-        "product_block_EgxhtV"
+        "product_block_EgxhtV",
+        "product_block_VifKqc"
       ],
       "name": "Our Product Section",
-      "settings": {}
+      "settings": {
+        "heading": "Our Products",
+        "subtext": "We create new, innovative clothing with built-in resistance."
+      }
     },
     "fitness_innovation": {
       "type": "fitness-innovation",
