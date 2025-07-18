@@ -304,6 +304,12 @@
   </div>
 </div>
 
+<script>
+
+  document.querySelectorAll('a').forEach(a => a.addEventListener('click', (e) => console.log('Click on', a.href)));
+
+</script>
+
 {% schema %}
 {
   "name": "Header",
