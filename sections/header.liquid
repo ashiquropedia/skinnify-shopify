@@ -198,7 +198,7 @@
       {% if section.settings.main_menu != blank %}
         {% for link in section.settings.main_menu.links %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>{{ link.title }}</a>
+            <a class="nav-link" href="/pages/collection" {% if link.active %}aria-current="page"{% endif %}>{{ link.title }}</a>
             {% if link.links != blank %}
               <ul class="nav flex-column ms-3">
                 {% for child in link.links %}
