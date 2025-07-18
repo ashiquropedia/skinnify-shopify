@@ -145,7 +145,7 @@
     <li class="nav-item {% if link.links.size > 0 %}dropdown{% endif %}">
       <a
         class="nav-link text-color-2a {% if link.links.size > 0 %}dropdown-toggle{% endif %}"
-        href="/pages/collection"
+        href="{{ link.url }}"
         {% if link.active %}aria-current="page"{% endif %}
         {% if link.links.size > 0 %}data-bs-toggle="dropdown" role="button" aria-expanded="false"{% endif %}
       >
@@ -198,7 +198,7 @@
       {% if section.settings.main_menu != blank %}
         {% for link in section.settings.main_menu.links %}
           <li class="nav-item">
-            <a class="nav-link" href="/pages/collection" {% if link.active %}aria-current="page"{% endif %}>{{ link.title }}</a>
+            <a class="nav-link" href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>{{ link.title }}</a>
             {% if link.links != blank %}
               <ul class="nav flex-column ms-3">
                 {% for child in link.links %}
